@@ -44,6 +44,7 @@
 			}
 		}else{
 			array_push($_SESSION['message'], "Email and Password Not Match. Please Try Again!");
+			header('location:' . $_SERVER['HTTP_REFERER']);
 		}
 	}
 
@@ -53,6 +54,6 @@
     // Error Helper
     if($_SESSION['message']){
 		var_dump($_SESSION['message']);
-		header("location: /");
+		header('location:' . $_SERVER['HTTP_REFERER']);
 	}
 ?>
