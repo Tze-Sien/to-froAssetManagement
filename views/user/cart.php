@@ -124,7 +124,7 @@
 
 	// Cart Loading for that particular user
 	function loadCart(){
-		const url = 'http://127.0.0.1:3000/controllers/transactions/viewCart.php';
+		const url = '/controllers/transactions/viewCart.php';
 		
 		const data = {
 			userId : "<?php echo $_SESSION['user']['@userId']; ?>"
@@ -170,7 +170,7 @@
 	}
 
 	function borrow(){
-		const url = 'http://127.0.0.1:3000/controllers/transactions/checkOutCart.php';
+		const url = '/controllers/transactions/checkOutCart.php';
 		let assetNameIdArray=[];
 
 		loadedCart.forEach(element => {

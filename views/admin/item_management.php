@@ -64,7 +64,7 @@
 
 	// Fetch Assets from PHP
 	function viewAllAssets(){
-		const url = 'http://127.0.0.1:3000/controllers/assets/view_assets.php';
+		const url = '/controllers/assets/view_assets.php';
 		const request = {
 		headers:{
 			"content-type":"application/json; charset=UTF-8" 
@@ -116,7 +116,7 @@
 
 	// Calculate Available Amount Behind
 	function calculateAssets(arrayOfId){
-		const url = 'http://127.0.0.1:3000/controllers/assets/all_items.php';
+		const url = '/controllers/assets/all_items.php';
 		const request = {
 		headers:{
 			"content-type":"application/json; charset=UTF-8" 

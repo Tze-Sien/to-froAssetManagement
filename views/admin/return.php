@@ -166,7 +166,7 @@
 	});
 
     function viewReturnRequest(){
-		const url = `http://127.0.0.1:3000/controllers/transactions/viewReturn.php`;
+		const url = `/controllers/transactions/viewReturn.php`;
 		const request = {
 		headers:{
 			"content-type":"application/json; charset=UTF-8" 

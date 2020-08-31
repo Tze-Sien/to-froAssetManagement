@@ -164,7 +164,7 @@
 	});
 
     function viewBorrowRequest(){
-		const url = `http://127.0.0.1:3000/controllers/transactions/viewBorrow.php`;
+		const url = `/controllers/transactions/viewBorrow.php`;
 		const request = {
 		headers:{
 			"content-type":"application/json; charset=UTF-8" 

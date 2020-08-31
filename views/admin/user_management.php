@@ -68,7 +68,7 @@
 
 	// fetchData from PHP
 	function viewAllUsers(){
-		const url = 'http://127.0.0.1:3000/controllers/auth/view_user.php';
+		const url = '/controllers/auth/view_user.php';
 	const request = {
 		headers:{
 			"content-type":"application/json; charset=UTF-8" 
@@ -99,7 +99,7 @@
 					<div class='col-sm-4 px-5 py-3'>${email}</div>
 					<div class='col-sm-3 px-5 py-3'>
 						<button id="editBtn"class='btn bg-darkbeige text-white r-25 px-4' data-toggle='modal' data-id="${userId}" data-target='#edit-users' onclick="editForm(${userId})">Edit</button>
-						<a href="http://127.0.0.1:3000/controllers/auth/delete_user.php?userId=${userId}" class="btn font-weight-bold dark-beige br-darkbeige r-25" onclick="return confirm('Are you sure, you want to delete it?')">Delete</a>
+						<a href="/controllers/auth/delete_user.php?userId=${userId}" class="btn font-weight-bold dark-beige br-darkbeige r-25" onclick="return confirm('Are you sure, you want to delete it?')">Delete</a>
 					</div>
 				`;
 				table.appendChild(div);

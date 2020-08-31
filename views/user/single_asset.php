@@ -86,7 +86,7 @@
 	});
 
 	function checkAvailabe(assetNameId){
-		const url = `http://127.0.0.1:3000/controllers/assets/single_assets.php?assetNameId=${assetNameId}`;
+		const url = `/controllers/assets/single_assets.php?assetNameId=${assetNameId}`;
 		const request = {
 			headers:{
 				"content-type":"application/json; charset=UTF-8" 
@@ -193,7 +193,7 @@
 
 	// Add to Cart Request
 	function addToCart(){
-		const url = 'http://127.0.0.1:3000/controllers/transactions/addToCart.php';
+		const url = '/controllers/transactions/addToCart.php';
 		
 		const data = {
 			userId : "<?php echo $_SESSION['user']['@userId']; ?>",
@@ -213,7 +213,7 @@
 	fetch(url, request)
 		.then(data => {return data.json()})
 		.then(res => {
-			window.location.replace("http://127.0.0.1:3000/views/user/cart.php")
+			window.location.replace("/views/user/cart.php")
 		})
 		.catch(error => console.log(error));
 	}

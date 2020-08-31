@@ -160,7 +160,7 @@
 		});
 
 		function viewAllItems(){
-		const url = `http://127.0.0.1:3000/controllers/transactions/viewUserBorrow.php?userId=<?php echo $_SESSION['user']['@userId']?>`;
+		const url = `/controllers/transactions/viewUserBorrow.php?userId=<?php echo $_SESSION['user']['@userId']?>`;
 		const request = {
 		headers:{
 			"content-type":"application/json; charset=UTF-8" 

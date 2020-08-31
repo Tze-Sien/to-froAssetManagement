@@ -94,7 +94,7 @@
 		});
 
 		function viewAllItems(assetNID){
-		const url = `http://127.0.0.1:3000/controllers/assets/single_assets.php?assetNameId=${assetNID}`;
+		const url = `/controllers/assets/single_assets.php?assetNameId=${assetNID}`;
 		const request = {
 		headers:{
 			"content-type":"application/json; charset=UTF-8" 
