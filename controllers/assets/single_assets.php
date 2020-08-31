@@ -29,7 +29,7 @@
             // Check Available Amount
             $availablity = 0;
             foreach($singleAsset as $element) {
-                if($element['availability'] == true) {
+                if($element['availability'] == 'true') {
                     $availablity++;
                 };
             }

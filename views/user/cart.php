@@ -19,7 +19,7 @@
 						</form>	
 					</div>
 					<div class="col-lg-6 pl-5 pr-5 padding-btn2"> 
-						<button class='title-btn1 bg-darkbeige text-white px-5 py-3 btn font-weight-bold mx-auto r-50 '>Borrow</button>		
+						<button onclick="borrow()" id="borrowBtn" class='title-btn1 bg-darkbeige text-white px-5 py-3 btn font-weight-bold mx-auto r-50'>Borrow</button>		
 					</div>
 				</div>
 			</div>
@@ -56,7 +56,7 @@
 							</div>
 						</div>
 					</div>
-					<a class="btn font-weight-bold bg-darkbeige form-control py-2 tr tl text-white" href="../../controllers/delete_assets.php?id=<?php echo($key['ItemID'] ) ?>">Delete</a>
+					<a class="btn font-weight-bold bg-darkbeige form-control py-2 tr tl text-white" href="../../controllers/delete_assets.php?=<?php echo($key['ItemID'] ) ?>">Delete</a>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4 col-sm-6 my-3">
@@ -74,7 +74,7 @@
 							</div>
 						</div>
 					</div>
-					<a class="btn font-weight-bold bg-darkbeige form-control py-2 tr tl text-white" href="../../controllers/delete_assets.php?id=<?php echo($key['ItemID'] ) ?>">Delete</a>
+					<a class="btn font-weight-bold bg-darkbeige form-control py-2 tr tl text-white" href="../../controllers/delete_assets.php?id=">Delete</a>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4 col-sm-6 my-3">
@@ -108,7 +108,7 @@
 
 
 <script>
-
+	var loadedCart;
 	window.addEventListener('DOMContentLoaded', () => {
 		// Clear Alert after 5 Seconds
 		let alertBox = document.getElementById('alert');
@@ -118,6 +118,7 @@
 
 		// Load Cart to User Interface
 		loadCart();
+			
 	});
 
 
@@ -128,7 +129,7 @@
 		const data = {
 			userId : "<?php echo $_SESSION['user']['@userId']; ?>"
 		};
-
+		
 		const request = {
 			method: 'POST',
 			headers: {
@@ -140,7 +141,13 @@
 		fetch(url, request)
 			.then(data => {return data.json()})
 			.then(res => {
-				
+				loadedCart = res;
+				if(loadedCart != []){
+					document.getElementById('borrowBtn').disabled = false;
+				}else{
+					document.getElementById('borrowBtn').disabled = true;
+				}
+
 				let table = document.getElementById('cartTable');
 				
 				res.forEach((item) => {
@@ -153,11 +160,40 @@
 					<div class="col-sm-3 px-5 py-2 tl">${assetName}</div>
 					<div class="col-sm-3 px-5 py-2 ">${quantity}</div>
 					<div class="col-sm-6 px-5 py-2 tr">
-						<a href="/controllers/transactions/deleteCartItem.php?assetNameId=${assetNameId}&userId=${userId}" 
+						<a href="/controllers/transactions/deleteCartItem.php?assetNameId=${assetNameId}&userId=${userId}&quantity=${quantity}" 
 						class='btn bg-darkbeige text-white r-25 px-4'>Delete</a>
 					</div> 
 				`;
+				})
 			})
+			.catch(error => console.log(error));
+	}
+
+	function borrow(){
+		const url = 'http://127.0.0.1:3000/controllers/transactions/checkOutCart.php';
+		let assetNameIdArray=[];
+
+		loadedCart.forEach(element => {
+			assetNameIdArray.push(element.assetNameId)
+		})
+
+		const data = {
+			userId : "<?php echo $_SESSION['user']['@userId']; ?>",
+			assetNameId : assetNameIdArray
+		};
+		
+		const request = {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json;charset=utf-8'
+			},
+			body: JSON.stringify(data)
+		};
+
+		fetch(url, request)
+			.then(data => {return data.json()})
+			.then(res => {
+				window.location.replace("/views/user/cart.php")				
 			})
 			.catch(error => console.log(error));
 	}

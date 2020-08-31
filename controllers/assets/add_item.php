@@ -38,7 +38,7 @@
             $array = [
                 '@assetNameId' => $assetNameId,
                 '@itemId' => $newItemId,
-                'availability' => true
+                'availability' => true,
             ];
         }else{
             array_push($_SESSION['message'], "Invalid Assset!");

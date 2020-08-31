@@ -82,8 +82,7 @@
 			let array = Object.entries(res);
 			localStorage.setItem('allUsers', JSON.stringify(array));
 			let table = document.getElementById('allUserTable');
-			
-
+		
 			array.forEach((item) => {
 				let key = item[0];
 				let userId = item[1]['@userId'];
@@ -121,7 +120,7 @@
 				found = item[1];
 			}
 		})
-		console.log(userIdElement)
+
 		if(found){
 			firstName.value = found['firstName'];
 			lastName.value = found['lastName'];

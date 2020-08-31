@@ -1,6 +1,7 @@
 <?php 
 	session_start();
 	$title = "Assets";
+	
 	function get_content(){​
 		
 		
@@ -212,7 +213,7 @@
 	fetch(url, request)
 		.then(data => {return data.json()})
 		.then(res => {
-			console.log(res);
+			window.location.replace("http://127.0.0.1:3000/views/user/cart.php")
 		})
 		.catch(error => console.log(error));
 	}
