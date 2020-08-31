@@ -43,7 +43,7 @@
               <a href='/views/admin/dashboard.php' class='nav-link text-white family-c'>Dashboard</a>
             </li>
             <li class='nav-item mx-3'>
-              <a href='/views/admin/transactions.php' class='nav-link text-white family-c'>Transactions</a>
+              <a href='/views/admin/borrow.php' class='nav-link text-white family-c'>Transactions</a>
             </li>
             <li class='nav-item mx-3'>
               <a href='/views/admin/user_management.php' class='nav-link text-white family-c'>User Management</a>

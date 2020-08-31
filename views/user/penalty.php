@@ -19,23 +19,22 @@
 				</div>
 				<div class="col-lg-6 m-0 px-4 padding-btn"> 
 					<select name="taskOption" class='darkgreen title-btn1 px-4 py-3 btn font-weight-bold mx-auto r-50 '>
-						<option type="submit" value="1">Borrowed Assets</option>
 						<option type="submit" value="2">Penalty</option>
+						<option type="submit" value="1">Borrowed Assets</option>
 					</select>		
 				</div>
 			</div>
 		</div>
 	</div>		
 </div>
-<div id="allAssetsItemTable" class="data-table container-fluid r-25 mt-4 darkgreen text-center font-weight-bold">
-	<div class="row mx-5">
-		<div class="col-sm-3 px-5 py-4 bg-grey bl">Item Id</div>
-		<div class="col-sm-3 px-5 py-4 bg-grey">Item Title</div>
-		<div class="col-sm-3 px-5 py-4 bg-grey">Due Date</div>
-		<div class="col-sm-3 px-5 py-4 bg-grey br">Status</div> 
+	<div id="allAssetsItemTable" class="data-table container-fluid r-25 mt-4 darkgreen text-center font-weight-bold">
+	  	<div class="row mx-5">
+	    	<div class="col-sm-2 px-5 py-4 bg-grey bl">Penalty Desc.</div>
+		    <div class="col-sm-2 px-5 py-4 bg-grey">Penalty Amount</div>
+            <div class="col-sm-8 px-5 py-4 bg-grey br"></div> 
+		</div>
+		
 	</div>
-	
-</div>
 
 
 	<section class="col-md-12 mx-4 mt-3 p-5 padding-0 mx-auto">
@@ -45,29 +44,21 @@
 					<div class="bg-lightgreen br bl">
 						<h5 class="m-0 font-weight-bold p-3 dark-beige">Barcode</h5>		
 					</div>
-					<div class="bg-white">
+					<div class="bg-white  ">
 						<div class="m-0 row">
 							<div class="px-3 py-2 col-md-6 bg-grey">
-								<h5 class="m-0">Item Title</h5>
+								<h5 class="m-0">Penalty Decs.</h5>
 							</div>
 							<div class="px-3 py-2 col-md-6">
-								<h5 class="m-0">Chair</h5>	
+								<h5 class="m-0">A0051</h5>	
 							</div>
 						</div>
-						<div class="m-0 row">
+						<div class="m-0 row ">
 							<div class="px-3 py-2 col-md-6 bg-grey">
-								<h5 class="m-0">Due Date</h5>
+								<h5 class="m-0">Penalty</h5>
 							</div>
 							<div class="px-3 py-2 col-md-6">
-								<h5 class="m-0">2 June 2020</h5>
-							</div>
-						</div>
-						<div class="m-0 row">
-							<div class="px-3 py-2 col-md-6 bg-grey">
-								<h5 class="m-0">Late Return</h5>
-							</div>
-							<div class="px-3 py-2 col-md-6">
-								<h5 class="m-0">3 Days</h5>
+								<h5 class="m-0">Chair</h5>
 							</div>
 						</div>
 					</div>
@@ -78,29 +69,21 @@
 					<div class="bg-lightgreen br bl">
 						<h5 class="m-0 font-weight-bold p-3 dark-beige">Barcode</h5>		
 					</div>
-					<div class="bg-white">
+					<div class="bg-white  ">
 						<div class="m-0 row">
 							<div class="px-3 py-2 col-md-6 bg-grey">
-								<h5 class="m-0">Item Title</h5>
+								<h5 class="m-0">Penalty Decs.</h5>
 							</div>
 							<div class="px-3 py-2 col-md-6">
-								<h5 class="m-0">Chair</h5>	
+								<h5 class="m-0">A0051</h5>	
 							</div>
 						</div>
-						<div class="m-0 row">
+						<div class="m-0 row ">
 							<div class="px-3 py-2 col-md-6 bg-grey">
-								<h5 class="m-0">Due Date</h5>
+								<h5 class="m-0">Penalty</h5>
 							</div>
 							<div class="px-3 py-2 col-md-6">
-								<h5 class="m-0">2 June 2020</h5>
-							</div>
-						</div>
-						<div class="m-0 row">
-							<div class="px-3 py-2 col-md-6 bg-grey">
-								<h5 class="m-0">Late Return</h5>
-							</div>
-							<div class="px-3 py-2 col-md-6">
-								<h5 class="m-0">3 Days</h5>
+								<h5 class="m-0">Chair</h5>
 							</div>
 						</div>
 					</div>
@@ -111,29 +94,21 @@
 					<div class="bg-lightgreen br bl">
 						<h5 class="m-0 font-weight-bold p-3 dark-beige">Barcode</h5>		
 					</div>
-					<div class="bg-white">
+					<div class="bg-white  ">
 						<div class="m-0 row">
 							<div class="px-3 py-2 col-md-6 bg-grey">
-								<h5 class="m-0">Item Title</h5>
+								<h5 class="m-0">Penalty Decs.</h5>
 							</div>
 							<div class="px-3 py-2 col-md-6">
-								<h5 class="m-0">Chair</h5>	
+								<h5 class="m-0">A0051</h5>	
 							</div>
 						</div>
-						<div class="m-0 row">
+						<div class="m-0 row ">
 							<div class="px-3 py-2 col-md-6 bg-grey">
-								<h5 class="m-0">Due Date</h5>
+								<h5 class="m-0">Penalty</h5>
 							</div>
 							<div class="px-3 py-2 col-md-6">
-								<h5 class="m-0">2 June 2020</h5>
-							</div>
-						</div>
-						<div class="m-0 row">
-							<div class="px-3 py-2 col-md-6 bg-grey">
-								<h5 class="m-0">Late Return</h5>
-							</div>
-							<div class="px-3 py-2 col-md-6">
-								<h5 class="m-0">3 Days</h5>
+								<h5 class="m-0">Chair</h5>
 							</div>
 						</div>
 					</div>
@@ -147,25 +122,26 @@
  ?>
 
 </main>
-
 <script>
-		window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('DOMContentLoaded', () => {
 			// Variables
 			let alertBox = document.getElementById('alert');
-			viewAllItems();
+			
+            viewReturnRequest();
+			
 			// Clear Alert after 2S
 			setTimeout(() => {
 				if(alertBox) alertBox.style.display = 'none';
 			}, 2000);
-		});
+	});
 
-		function viewAllItems(){
-		const url = `http://127.0.0.1:3000/controllers/transactions/viewUserBorrow.php?userId=<?php echo $_SESSION['user']['@userId']?>`;
+    function viewReturnRequest(){
+		const url = `http://127.0.0.1:3000/controllers/transactions/viewPenalty.php`;
 		const request = {
 		headers:{
 			"content-type":"application/json; charset=UTF-8" 
 		},
-		method:"GET"
+		    method:"GET"
 		};
 
 		fetch(url, request)
@@ -173,18 +149,16 @@
 			.then(res => {
 				let array = Object.entries(res);			
 				let table = document.getElementById('allAssetsItemTable');
-			
-				array.forEach((item) => {
-					console.log(item)
-					table.innerHTML += `
-						<div class="row mx-5">
-							<div class="col-sm-3 px-5 py-4 bg-white">I00${item[1]["data"]["@itemId"]}</div>
-							<div class="col-sm-3 px-5 py-4 bg-white">${item[1]["data"]["assetName"]}</div>
-							<div class="col-sm-3 px-5 py-4 bg-white">${item[1]["data"]["dueDate"]}</div>
-							<div class="col-sm-3 px-5 py-4 bg-white">${item[1]["data"]["status"]}</div> 
-						</div>
-					`;
-				})
+                array.forEach((element) => {
+
+                    table.innerHTML += `
+                    <div class="row mx-5">
+                        <div class="col-sm-2 px-5 py-4 bg-white">A0051</div>
+                        <div class="col-sm-2 px-5 py-4 bg-white">Chair</div>
+                        <div class="col-sm-8 px-5 py-4 bg-white"></div> 
+                    </div>`;
+                    
+                })
 			})
 			.catch(error => console.log(error));
 			}
@@ -208,5 +182,4 @@
 					}
 				}
 			}
-
 </script>

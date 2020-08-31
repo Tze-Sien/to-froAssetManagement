@@ -74,5 +74,25 @@
 
         return NULL;
     }
+
+    // 5. View with Multiple Conditions
+    function viewMulCondition($tableName,$property, $cmpdata, $property2, $cmpdata2) {
+        global $database;
+        $filteredKeyArray = [];
+        $table = viewTableData($tableName);
+        $newUpdate = [
+            'status' => $status
+        ];
+        foreach($table as $element => $data) {
+            if($data["$property"] == $cmpdata && $data["$property2"] == $cmpdata2){
+                $output = [
+                    "key" => $element,
+                    "data" => $data
+                ];
+                array_push($filteredKeyArray, $output);
+            }
+        }
+        return $filteredKeyArray;
+    }
     
 ?>
