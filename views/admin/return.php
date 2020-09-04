@@ -17,11 +17,11 @@
 					</form>	
 				</div>
 				<div class="col-lg-6 m-0 px-4 padding-btn"> 
-					<select name="taskOption" class='darkgreen title-btn1 px-4 py-3 btn font-weight-bold mx-auto r-50 '>
-						<option value=<?php echo $i = "2" ?>><a href="">Return</a></option>
-						<option value=<?php echo $i = "1" ?>><a href="">Borrow</a></option>
-						<option value=<?php echo $i = "0" ?>><a href="#">Due Transations</a></option>	
-					</select>		
+					<select id="pageChange" onchange="changePage()" name="taskOption" class='darkgreen title-btn1 px-4 py-3 btn font-weight-bold mx-auto r-50 '>
+						<option value=<?php echo $i = "0" ?>><a href="">Borrow</a></option>
+						<option value=<?php echo $i = "1" ?>><a href="#">Due Transations</a></option>	
+						<option value=<?php echo $i = "2" ?> selected="selected"><a href="">Return</a></option>
+					</select>
 				</div>
 			</div>
 		</div>
@@ -217,5 +217,18 @@
 					}
 				}
 			}
+
+
+		function changePage(e){
+			let page = document.getElementById("pageChange").value;
+
+			if(page == 0){
+				window.location.replace("/views/admin/borrow.php");
+			}else if(page == 1){
+				window.location.replace("/views/admin/penalty.php");
+			}else{
+				window.location.replace("/views/admin/return.php");
+			}	
+		}
 </script>
 

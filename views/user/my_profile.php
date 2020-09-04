@@ -18,9 +18,9 @@
 					</form>	
 				</div>
 				<div class="col-lg-6 m-0 px-4 padding-btn"> 
-					<select name="taskOption" class='darkgreen title-btn1 px-4 py-3 btn font-weight-bold mx-auto r-50 '>
-						<option type="submit" value="1">Borrowed Assets</option>
-						<option type="submit" value="2">Penalty</option>
+					<select id="pageChange" onchange="changePage()" name="taskOption" class='darkgreen title-btn1 px-4 py-3 btn font-weight-bold mx-auto r-50 '>
+						<option type="submit" value="0" selected="selected">Borrowed Assets</option>
+						<option type="submit" value="1">Penalty</option>
 					</select>		
 				</div>
 			</div>
@@ -208,5 +208,14 @@
 					}
 				}
 			}
-
+		
+		function changePage(){
+			let page = document.getElementById("pageChange").value;
+			console.log("hahah")
+			if(page == 0){
+				window.location.replace("/views/user/my_profile.php");
+			}else if(page == 1){
+				window.location.replace("/views/user/penalty.php");
+			}	
+		}
 </script>
